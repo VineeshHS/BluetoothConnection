@@ -14,6 +14,11 @@
 		87B3F1242BED9C7900CBD49F /* BluetoothConnectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B3F1232BED9C7900CBD49F /* BluetoothConnectionTests.swift */; };
 		87B3F12E2BED9C7900CBD49F /* BluetoothConnectionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B3F12D2BED9C7900CBD49F /* BluetoothConnectionUITests.swift */; };
 		87B3F1302BED9C7900CBD49F /* BluetoothConnectionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B3F12F2BED9C7900CBD49F /* BluetoothConnectionUITestsLaunchTests.swift */; };
+		87B3F13D2BED9CBB00CBD49F /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B3F13C2BED9CBB00CBD49F /* ViewModel.swift */; };
+		87B3F13F2BED9CDD00CBD49F /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B3F13E2BED9CDD00CBD49F /* APIManager.swift */; };
+		87B3F1412BED9CFF00CBD49F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B3F1402BED9CFF00CBD49F /* Model.swift */; };
+		87B3F1442BEDB1A900CBD49F /* DeviceScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B3F1432BEDB1A900CBD49F /* DeviceScanner.swift */; };
+		87B3F1462BEDC4CE00CBD49F /* DeviceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B3F1452BEDC4CE00CBD49F /* DeviceRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,12 @@
 		87B3F1292BED9C7900CBD49F /* BluetoothConnectionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BluetoothConnectionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		87B3F12D2BED9C7900CBD49F /* BluetoothConnectionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothConnectionUITests.swift; sourceTree = "<group>"; };
 		87B3F12F2BED9C7900CBD49F /* BluetoothConnectionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothConnectionUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		87B3F13C2BED9CBB00CBD49F /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		87B3F13E2BED9CDD00CBD49F /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		87B3F1402BED9CFF00CBD49F /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		87B3F1422BED9F5400CBD49F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		87B3F1432BEDB1A900CBD49F /* DeviceScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceScanner.swift; sourceTree = "<group>"; };
+		87B3F1452BEDC4CE00CBD49F /* DeviceRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +105,10 @@
 		87B3F1112BED9C7700CBD49F /* BluetoothConnection */ = {
 			isa = PBXGroup;
 			children = (
+				87B3F1422BED9F5400CBD49F /* Info.plist */,
 				87B3F1122BED9C7700CBD49F /* BluetoothConnectionApp.swift */,
-				87B3F1142BED9C7700CBD49F /* ContentView.swift */,
+				87B3F1472BEDE12800CBD49F /* Model */,
+				87B3F1492BEDE16600CBD49F /* ViewModel */,
 				87B3F1162BED9C7900CBD49F /* Assets.xcassets */,
 				87B3F1182BED9C7900CBD49F /* Preview Content */,
 			);
@@ -125,6 +138,34 @@
 				87B3F12F2BED9C7900CBD49F /* BluetoothConnectionUITestsLaunchTests.swift */,
 			);
 			path = BluetoothConnectionUITests;
+			sourceTree = "<group>";
+		};
+		87B3F1472BEDE12800CBD49F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				87B3F1402BED9CFF00CBD49F /* Model.swift */,
+				87B3F13E2BED9CDD00CBD49F /* APIManager.swift */,
+				87B3F1482BEDE14600CBD49F /* View */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		87B3F1482BEDE14600CBD49F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				87B3F1142BED9C7700CBD49F /* ContentView.swift */,
+				87B3F1452BEDC4CE00CBD49F /* DeviceRow.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		87B3F1492BEDE16600CBD49F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				87B3F13C2BED9CBB00CBD49F /* ViewModel.swift */,
+				87B3F1432BEDB1A900CBD49F /* DeviceScanner.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +298,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87B3F1412BED9CFF00CBD49F /* Model.swift in Sources */,
+				87B3F13F2BED9CDD00CBD49F /* APIManager.swift in Sources */,
+				87B3F1442BEDB1A900CBD49F /* DeviceScanner.swift in Sources */,
 				87B3F1152BED9C7700CBD49F /* ContentView.swift in Sources */,
+				87B3F13D2BED9CBB00CBD49F /* ViewModel.swift in Sources */,
 				87B3F1132BED9C7700CBD49F /* BluetoothConnectionApp.swift in Sources */,
+				87B3F1462BEDC4CE00CBD49F /* DeviceRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +470,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"BluetoothConnection/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BluetoothConnection/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "A message that tells the user why the app needs access to Bluetooth";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "A message that tells the user why the app is requesting the ability to connect to Bluetooth peripherals.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -452,6 +501,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"BluetoothConnection/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BluetoothConnection/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "A message that tells the user why the app needs access to Bluetooth";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "A message that tells the user why the app is requesting the ability to connect to Bluetooth peripherals.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
